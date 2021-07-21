@@ -14,7 +14,7 @@ class BookCase extends Component {
   }
 }
 
-BookCase.prototype = {
+BookCase.prototypes = {
   shelves: PropTypes.object.isRequired,
 };
 

@@ -19,7 +19,7 @@ class BookList extends Component {
   }
 }
 
-BookList.prototype = {
+BookList.prototypes = {
   shelves: PropTypes.object.isRequired,
 };
 
