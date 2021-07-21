@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import AddBookButton from "./AddBookButton";
-import BookCase from "./BookCase";
+import AddBookButton from "../AddBookButton";
+import BookCase from "../BookCase";
 
 class BookList extends Component {
   render() {

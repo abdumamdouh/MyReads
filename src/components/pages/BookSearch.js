@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import SearchBar from "./SearchBar";
-import SearchResult from "./SearchResult";
+import SearchBar from "../SearchBar";
+import SearchResult from "../SearchResult";
 
 class BookSearch extends Component {
   render() {
