@@ -6,8 +6,13 @@ class BookCase extends Component {
   render() {
     return (
       <div>
-        {this.props.shelves.map((shelve) => (
-          <Bookshelf shelve={shelve} />
+        {this.props.shelves.map((shelf) => (
+          <Bookshelf
+            shelf={shelf}
+            books={this.props.books.filter(
+              (book) => book.shelf.toLowerCase() === shelf.toLowerCase()
+            )}
+          />
         ))}
       </div>
     );
@@ -16,6 +21,7 @@ class BookCase extends Component {
 
 BookCase.prototypes = {
   shelves: PropTypes.object.isRequired,
+  books: PropTypes.array.isRequired,
 };
 
 export default BookCase;

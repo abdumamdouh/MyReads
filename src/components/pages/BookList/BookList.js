@@ -12,7 +12,7 @@ class BookList extends Component {
           <h1>MyReads</h1>
         </div>
         <div className={classes.listBooksContent}>
-          <BookCase shelves={this.props.Shelves} />
+          <BookCase shelves={this.props.Shelves} books={this.props.books} />
         </div>
         <AddBookButton />
       </div>
@@ -22,6 +22,7 @@ class BookList extends Component {
 
 BookList.prototypes = {
   shelves: PropTypes.object.isRequired,
+  books: PropTypes.array.isRequired,
 };
 
 export default BookList;
