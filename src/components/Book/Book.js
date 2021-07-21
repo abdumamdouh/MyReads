@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import classes from "./Book.module.css";
-import Selector from "../BookShelfChanger/BookShelfChanger";
+import BookShelfChanger from "../BookShelfChanger/BookShelfChanger";
 
 class Book extends Component {
   render() {
@@ -18,7 +18,7 @@ class Book extends Component {
                 : "url()",
             }}
           />
-          <Selector />
+          <BookShelfChanger />
         </div>
 
         <div className={classes.bookTitle}>{this.props.book.title}</div>

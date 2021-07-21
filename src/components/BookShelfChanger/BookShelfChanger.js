@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Selector extends Component {
+class BookShelfChanger extends Component {
   render() {
     return (
       <div className="book-shelf-changer">
@@ -18,4 +18,4 @@ class Selector extends Component {
   }
 }
 
-export default Selector;
+export default BookShelfChanger;

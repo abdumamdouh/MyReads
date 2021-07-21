@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { v4 as uuidv4 } from "uuid";
 import Bookshelf from "./Bookshelf/Bookshelf";
 
 class BookCase extends Component {
@@ -8,6 +9,7 @@ class BookCase extends Component {
       <div>
         {this.props.shelves.map((shelf) => (
           <Bookshelf
+            key={uuidv4()}
             shelf={shelf}
             books={this.props.books.filter(
               (book) => book.shelf.toLowerCase() === shelf.toLowerCase()
