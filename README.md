@@ -1,3 +1,6 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ed7154ae-3298-48ca-9a2d-568f3091fc35/deploy-status)](https://app.netlify.com/sites/reactnd-myreads/deploys)
+[![Edit reactnd-project-myreads](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/james-priest/reactnd-project-myreads/tree/master/)
+
 # MyReads
 
 MyReads is a simple cataloging app that allows you to place books in one of three shelves or categories.
@@ -10,11 +13,7 @@ It also allow you to search for books based on title and author.
 
 This app is the first of three projects required for [Udacity's React Nanodegree program](https://www.udacity.com/course/react-nanodegree--nd019).
 
-You can read a detailed walk-through of how this app was constructed in [MyReads Code Notes](https://james-priest.github.io/reactnd-project-myreads/).
-
 - **Live Demo:** [https://reactnd-myreads.netlify.com/](https://reactnd-myreads.netlify.com/)
-
-You can see [screenshots](#screenshots) below.
 
 ## Installation
 
@@ -58,6 +57,12 @@ The project can be viewed in the browser at
     ├── index.css # Global styles. You probably won't need to change anything here.
     └── index.js # You should not need to modify this file. It is used for DOM rendering only.
 ```
+
+## Screenshots
+
+![screenshot1](https://i.ibb.co/tZgq6KP/react-2.png)
+
+![screenshot2](https://cdn3.bbcode0.com/uploads/2021/7/22/6635676c2e97b2f5748fc14de81ca22d-full.png)
 
 ## Backend Server
 

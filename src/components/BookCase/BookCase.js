@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { v4 as uuidv4 } from "uuid";
-import Bookshelf from "./Bookshelf/Bookshelf";
+import Bookshelf from "../Bookshelf/Bookshelf";
 
 class BookCase extends Component {
   render() {

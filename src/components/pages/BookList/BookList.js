@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import classes from "./BookList.module.css";
-import AddBookButton from "../../AddBookButton";
-import BookCase from "../../BookCase";
+import AddBookButton from "../../AddBookButton/AddBookButton";
+import BookCase from "../../BookCase/BookCase";
 
 class BookList extends Component {
   render() {
