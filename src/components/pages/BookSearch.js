@@ -6,8 +6,12 @@ class BookSearch extends Component {
   render() {
     return (
       <div className="search-books">
-        <SearchBar />
-        <SearchResult />
+        <SearchBar
+          updateQuery={(query) => {
+            this.props.updateQuery(query);
+          }}
+        />
+        <SearchResult books={this.props.queryBooks} />
       </div>
     );
   }

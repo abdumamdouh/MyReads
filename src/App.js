@@ -9,7 +9,7 @@ import BookSearch from "./components/pages/BookSearch";
 class BooksApp extends React.Component {
   state = {
     BookShelves: ["currentlyReading", "wantToRead", "Read"],
-    query: "",
+    query: [],
     books: [],
   };
 
@@ -26,6 +26,19 @@ class BooksApp extends React.Component {
         }),
       }));
     });
+  };
+
+  updateQuery = (query) => {
+    if (query === "") {
+      return;
+    }
+    BooksAPI.search(query).then((books) => {
+      // console.log(books);
+      this.setState(() => ({
+        query: books,
+      }));
+    });
+    // .catch((error) => console.log(error));
   };
 
   componentDidMount() {
@@ -52,7 +65,12 @@ class BooksApp extends React.Component {
         </Route>
 
         <Route path="/search">
-          <BookSearch />
+          <BookSearch
+            updateQuery={(query) => {
+              this.updateQuery(query);
+            }}
+            queryBooks={this.state.query}
+          />
         </Route>
       </Switch>
     );

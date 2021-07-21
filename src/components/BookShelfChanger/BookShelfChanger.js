@@ -32,8 +32,8 @@ class BookShelfChanger extends Component {
   }
 }
 BookShelfChanger.propTypes = {
-  value: PropTypes.string.isRequired,
-  updateShelf: PropTypes.func.isRequired,
+  value: PropTypes.string,
+  updateShelf: PropTypes.func,
 };
 
 export default BookShelfChanger;

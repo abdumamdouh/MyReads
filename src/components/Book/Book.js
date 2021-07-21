@@ -34,10 +34,12 @@ class Book extends Component {
 
         <div className={classes.bookTitle}>{book.title}</div>
         <div className={classes.bookAuthors}>
-          {book.authors.map(
-            (author, index) =>
-              `${author}${index + 1 === book.authors.length ? "" : ", "} `
-          )}
+          {book.authors !== undefined
+            ? book.authors.map(
+                (author, index) =>
+                  `${author}${index + 1 === book.authors.length ? "" : ", "}`
+              )
+            : ""}
         </div>
       </div>
     );
@@ -46,7 +48,7 @@ class Book extends Component {
 
 Book.propTypes = {
   book: PropTypes.object.isRequired,
-  updateShelf: PropTypes.func.isRequired,
+  updateShelf: PropTypes.func,
 };
 
 export default Book;

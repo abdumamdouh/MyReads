@@ -2,6 +2,17 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 class SearchBar extends Component {
+  state = {
+    query: "",
+  };
+
+  onChangeHandler = (query) => {
+    this.setState(() => ({
+      query,
+    }));
+    this.props.updateQuery(query);
+  };
+
   render() {
     return (
       <div className="search-books-bar">
@@ -19,7 +30,14 @@ class SearchBar extends Component {
                   you don't find a specific author or title. Every search is limited by search terms.
                 */}
 
-          <input type="text" placeholder="Search by title or author" />
+          <input
+            type="text"
+            placeholder="Search by title or author"
+            value={this.state.query}
+            onChange={(e) => {
+              this.onChangeHandler(e.target.value.trim());
+            }}
+          />
         </div>
       </div>
     );
