@@ -14,6 +14,7 @@ class BooksApp extends React.Component {
         <Route exact path="/">
           <BookList />
         </Route>
+
         <Route path="/search">
           <BookSearch />
         </Route>
