@@ -5,7 +5,9 @@ class BookCase extends Component {
   render() {
     return (
       <div>
-        <Bookshelf />
+        {this.props.shelves.map((shelve) => (
+          <Bookshelf shelve={shelve} />
+        ))}
       </div>
     );
   }

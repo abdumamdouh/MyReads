@@ -6,13 +6,15 @@ import "./App.css";
 import BookList from "./components/pages/BookList";
 import BookSearch from "./components/pages/BookSearch";
 class BooksApp extends React.Component {
-  state = {};
+  state = {
+    BookShelves: ["Currently Reading", "Want to Read", "Read"],
+  };
 
   render() {
     return (
       <Switch>
         <Route exact path="/">
-          <BookList />
+          <BookList Shelves={this.state.BookShelves} />
         </Route>
 
         <Route path="/search">
