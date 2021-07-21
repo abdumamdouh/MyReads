@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import Selector from "./Selector";
+import classes from "./Book.module.css";
+import Selector from "../BookShelfChanger/BookShelfChanger";
 
 class Book extends Component {
   render() {
     return (
-      <div className="book">
-        <div className="book-top">
+      <div className={classes.book}>
+        <div className={classes.bookTop}>
           <div
-            className="book-cover"
+            className={classes.bookCover}
             style={{
               width: 128,
               height: 193,
@@ -19,8 +20,8 @@ class Book extends Component {
           <Selector />
         </div>
 
-        <div className="book-title">To Kill a Mockingbird</div>
-        <div className="book-authors">Harper Lee</div>
+        <div className={classes.bookTitle}>To Kill a Mockingbird</div>
+        <div className={classes.bookAuthors}>Harper Lee</div>
       </div>
     );
   }

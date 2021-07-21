@@ -1,16 +1,17 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import AddBookButton from "../AddBookButton";
-import BookCase from "../BookCase";
+import classes from "./BookList.module.css";
+import AddBookButton from "../../AddBookButton";
+import BookCase from "../../BookCase";
 
 class BookList extends Component {
   render() {
     return (
       <div className="list-books">
-        <div className="list-books-title">
+        <div className={classes.listBooksTitle}>
           <h1>MyReads</h1>
         </div>
-        <div className="list-books-content">
+        <div className={classes.listBooksContent}>
           <BookCase shelves={this.props.Shelves} />
         </div>
         <AddBookButton />

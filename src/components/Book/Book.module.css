@@ -1,0 +1,23 @@
+.book {
+  width: 140px;
+}
+
+.bookTitle,
+.bookAuthors {
+  font-size: 0.8em;
+}
+
+.bookTitle {
+  margin-top: 10px;
+}
+
+.bookAuthors {
+  color: #999;
+}
+
+.bookTop {
+  position: relative;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+}

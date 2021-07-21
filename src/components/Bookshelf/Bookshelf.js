@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import Book from "./Book";
+import classes from "./Bookshelf.module.css";
+import Book from "../Book/Book";
 
 class Bookshelf extends Component {
   render() {
     return (
-      <div className="bookshelf">
-        <h2 className="bookshelf-title">{this.props.shelve}</h2>
-        <div className="bookshelf-books">
+      <div className={classes.bookshelf}>
+        <h2 className={classes.bookshelfTitle}>{this.props.shelve}</h2>
+        <div className={classes.bookshelfBooks}>
           <ol className="books-grid">
             <li>
               <Book />
