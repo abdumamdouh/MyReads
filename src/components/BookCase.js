@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import Bookshelf from "./Bookshelf";
 
 class BookCase extends Component {
@@ -12,5 +13,9 @@ class BookCase extends Component {
     );
   }
 }
+
+BookCase.prototype = {
+  shelves: PropTypes.object.isRequired,
+};
 
 export default BookCase;

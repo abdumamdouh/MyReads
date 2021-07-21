@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import Book from "./Book";
 
 class Bookshelf extends Component {
@@ -17,5 +18,9 @@ class Bookshelf extends Component {
     );
   }
 }
+
+Bookshelf.PropTypes = {
+  shelve: PropTypes.string.isRequired,
+};
 
 export default Bookshelf;

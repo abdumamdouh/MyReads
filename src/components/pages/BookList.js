@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import AddBookButton from "../AddBookButton";
 import BookCase from "../BookCase";
 
@@ -17,5 +18,9 @@ class BookList extends Component {
     );
   }
 }
+
+BookList.prototype = {
+  shelves: PropTypes.object.isRequired,
+};
 
 export default BookList;

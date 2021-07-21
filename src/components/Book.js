@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import Selector from "./Selector";
 
 class Book extends Component {
@@ -24,5 +25,11 @@ class Book extends Component {
     );
   }
 }
+
+Book.PropTypes = {
+  title: PropTypes.string,
+  authors: PropTypes.string,
+  imgUrl: PropTypes.string,
+};
 
 export default Book;
