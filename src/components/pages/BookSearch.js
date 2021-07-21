@@ -11,7 +11,12 @@ class BookSearch extends Component {
             this.props.updateQuery(query);
           }}
         />
-        <SearchResult books={this.props.queryBooks} />
+        <SearchResult
+          books={this.props.queryBooks}
+          updateShelf={(shelf, book) => {
+            this.props.updateShelf(shelf, book);
+          }}
+        />
       </div>
     );
   }

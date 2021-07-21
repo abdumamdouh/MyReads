@@ -15,16 +15,15 @@ class BooksApp extends React.Component {
 
   updateShelf = (shelf, book) => {
     BooksAPI.update(book, shelf).then(() => {
-      this.setState((prev) => ({
-        books: prev.books.map((b) => {
-          if (b.id === book.id) {
-            b.shelf = shelf;
-            return b;
-          } else {
-            return b;
-          }
-        }),
-      }));
+      BooksAPI.getAll()
+        .then((books) => {
+          this.setState(() => ({
+            books,
+          }));
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     });
   };
 
@@ -37,9 +36,21 @@ class BooksApp extends React.Component {
     }
     BooksAPI.search(query).then((books) => {
       // console.log(books);
-      this.setState(() => ({
-        query: books,
-      }));
+      if (books.length > 0) {
+        const booksWithShelves = books.map((book) => {
+          this.state.books.forEach((b) => {
+            if (b.id === book.id) {
+              book.shelf = b.shelf;
+            }
+          });
+
+          return book;
+        });
+
+        this.setState(() => ({
+          query: booksWithShelves,
+        }));
+      }
     });
     // .catch((error) => console.log(error));
   };
@@ -73,6 +84,9 @@ class BooksApp extends React.Component {
               this.updateQuery(query);
             }}
             queryBooks={this.state.query}
+            updateShelf={(shelf, book) => {
+              this.updateShelf(shelf, book);
+            }}
           />
         </Route>
       </Switch>

@@ -1,13 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import classes from "./Book.module.css";
-// import * as BookAPI from "../../api/BooksAPI";
 import BookShelfChanger from "../BookShelfChanger/BookShelfChanger";
 
 class Book extends Component {
-  // updateShelf = (shelf) => {
-  //   BookAPI.update(this.props.book, shelf).then((data) => console.log(data));
-  // };
   render() {
     const { book } = this.props;
     return (
@@ -18,13 +14,14 @@ class Book extends Component {
             style={{
               width: 128,
               height: 193,
-              backgroundImage: book.imageLinks.thumbnail
-                ? `url(${book.imageLinks.thumbnail})`
-                : "url()",
+              backgroundImage:
+                book.imageLinks !== undefined
+                  ? `url(${book.imageLinks.thumbnail})`
+                  : "url()",
             }}
           />
           <BookShelfChanger
-            value={book.shelf}
+            value={book.shelf !== undefined ? book.shelf : "none"}
             updateShelf={(shelf) => {
               // console.log(shelf, book);
               this.props.updateShelf(shelf, book);
