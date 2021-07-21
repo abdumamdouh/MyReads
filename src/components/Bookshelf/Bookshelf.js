@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { v4 as uuidv4 } from "uuid";
 import classes from "./Bookshelf.module.css";
 import Book from "../Book/Book";
 
 class Bookshelf extends Component {
   render() {
+    const { books, shelf } = this.props;
     return (
       <div className={classes.bookshelf}>
         <h2 className={classes.bookshelfTitle}>
-          {this.props.shelf === "currentlyReading"
+          {shelf === "currentlyReading"
             ? "Currently Reading"
             : this.props.shelf === "wantToRead"
             ? "Want To Read"
@@ -17,9 +17,15 @@ class Bookshelf extends Component {
         </h2>
         <div className={classes.bookshelfBooks}>
           <ol className="books-grid">
-            {this.props.books.map((book) => (
-              <li key={uuidv4()}>
-                <Book book={book} />
+            {books.map((book) => (
+              <li key={book.id}>
+                <Book
+                  book={book}
+                  updateShelf={(shelf, book) => {
+                    // console.log(shelf, book);
+                    this.props.updateShelf(shelf, book);
+                  }}
+                />
               </li>
             ))}
           </ol>
@@ -32,6 +38,7 @@ class Bookshelf extends Component {
 Bookshelf.propTypes = {
   shelf: PropTypes.string.isRequired,
   books: PropTypes.array.isRequired,
+  updateShelf: PropTypes.func.isRequired,
 };
 
 export default Bookshelf;

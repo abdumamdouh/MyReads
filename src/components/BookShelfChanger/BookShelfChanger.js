@@ -1,10 +1,24 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class BookShelfChanger extends Component {
+  state = {
+    shelf: this.props.value,
+  };
+
+  onChangeHandler = (shelf) => {
+    this.setState(() => ({ shelf }));
+    this.props.updateShelf(shelf);
+  };
+
   render() {
+    const { value } = this.props;
     return (
       <div className="book-shelf-changer">
-        <select>
+        <select
+          value={value}
+          onChange={(event) => this.onChangeHandler(event.target.value)}
+        >
           <option value="move" disabled>
             Move to...
           </option>
@@ -17,5 +31,9 @@ class BookShelfChanger extends Component {
     );
   }
 }
+BookShelfChanger.propTypes = {
+  value: PropTypes.string.isRequired,
+  updateShelf: PropTypes.func.isRequired,
+};
 
 export default BookShelfChanger;

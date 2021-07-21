@@ -5,15 +5,20 @@ import Bookshelf from "./Bookshelf/Bookshelf";
 
 class BookCase extends Component {
   render() {
+    const { books, shelves } = this.props;
     return (
       <div>
-        {this.props.shelves.map((shelf) => (
+        {shelves.map((shelf) => (
           <Bookshelf
             key={uuidv4()}
             shelf={shelf}
-            books={this.props.books.filter(
+            books={books.filter(
               (book) => book.shelf.toLowerCase() === shelf.toLowerCase()
             )}
+            updateShelf={(shelf, book) => {
+              // console.log(shelf, book);
+              this.props.updateShelf(shelf, book);
+            }}
           />
         ))}
       </div>
@@ -24,6 +29,7 @@ class BookCase extends Component {
 BookCase.prototypes = {
   shelves: PropTypes.object.isRequired,
   books: PropTypes.array.isRequired,
+  updateShelf: PropTypes.func.isRequired,
 };
 
 export default BookCase;
