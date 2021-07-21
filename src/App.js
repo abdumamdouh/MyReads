@@ -2,7 +2,6 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import * as BooksAPI from "./api/BooksAPI";
 import "./App.css";
-
 import BookList from "./components/pages/BookList/BookList";
 import BookSearch from "./components/pages/BookSearch";
 
@@ -35,7 +34,6 @@ class BooksApp extends React.Component {
       return;
     }
     BooksAPI.search(query).then((books) => {
-      // console.log(books);
       if (books.length > 0) {
         const booksWithShelves = books.map((book) => {
           this.state.books.forEach((b) => {
@@ -52,7 +50,6 @@ class BooksApp extends React.Component {
         }));
       }
     });
-    // .catch((error) => console.log(error));
   };
 
   componentDidMount() {

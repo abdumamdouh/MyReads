@@ -22,7 +22,6 @@ class Bookshelf extends Component {
                 <Book
                   book={book}
                   updateShelf={(shelf, book) => {
-                    // console.log(shelf, book);
                     this.props.updateShelf(shelf, book);
                   }}
                 />

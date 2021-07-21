@@ -17,7 +17,6 @@ class BookList extends Component {
             shelves={Shelves}
             books={books}
             updateShelf={(shelf, book) => {
-              // console.log(shelf, book);
               this.props.updateShelf(shelf, book);
             }}
           />

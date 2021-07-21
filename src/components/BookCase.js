@@ -16,7 +16,6 @@ class BookCase extends Component {
               (book) => book.shelf.toLowerCase() === shelf.toLowerCase()
             )}
             updateShelf={(shelf, book) => {
-              // console.log(shelf, book);
               this.props.updateShelf(shelf, book);
             }}
           />

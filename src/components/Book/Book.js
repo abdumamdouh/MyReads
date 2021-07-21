@@ -23,7 +23,6 @@ class Book extends Component {
           <BookShelfChanger
             value={book.shelf !== undefined ? book.shelf : "none"}
             updateShelf={(shelf) => {
-              // console.log(shelf, book);
               this.props.updateShelf(shelf, book);
             }}
           />
