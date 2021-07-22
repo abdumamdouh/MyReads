@@ -2,24 +2,22 @@ import React, { Component } from "react";
 import SearchBar from "../../SearchBar/SearchBar";
 import SearchResult from "../../SearchResult/SearchResult";
 
-class BookSearch extends Component {
-  render() {
-    return (
-      <div className="search-books">
-        <SearchBar
-          updateQuery={(query) => {
-            this.props.updateQuery(query);
-          }}
-        />
-        <SearchResult
-          books={this.props.queryBooks}
-          updateShelf={(shelf, book) => {
-            this.props.updateShelf(shelf, book);
-          }}
-        />
-      </div>
-    );
-  }
-}
+const BookSearch = (props) => {
+  return (
+    <div className="search-books">
+      <SearchBar
+        updateQuery={(query) => {
+          props.updateQuery(query);
+        }}
+      />
+      <SearchResult
+        books={props.queryBooks}
+        updateShelf={(shelf, book) => {
+          props.updateShelf(shelf, book);
+        }}
+      />
+    </div>
+  );
+};
 
 export default BookSearch;
