@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ed7154ae-3298-48ca-9a2d-568f3091fc35/deploy-status)]()
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ed7154ae-3298-48ca-9a2d-568f3091fc35/deploy-status)](https://cranky-williams-8edca0.netlify.app/)
 [![Edit reactnd-project-myreads](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/abdumamdouh/MyReads)
 
 # MyReads
@@ -12,6 +12,8 @@ MyReads is a simple cataloging app that allows you to place books in one of thre
 It also allow you to search for books based on title and author.
 
 This app is the first of three projects required for [Udacity's React Nanodegree program](https://www.udacity.com/course/react-nanodegree--nd019).
+
+- **Live Demo:** [Here](https://cranky-williams-8edca0.netlify.app/)
 
 ## Installation
 
@@ -38,6 +40,12 @@ The project can be viewed in the browser at
 ![screenshot1](https://i.ibb.co/tZgq6KP/react-2.png)
 
 ![screenshot2](https://cdn3.bbcode0.com/uploads/2021/7/22/6635676c2e97b2f5748fc14de81ca22d-full.png)
+
+## Component Tree Diagram
+
+![screenshot1](https://i.ibb.co/vH0RWWn/Component-Tree.png)
+
+![screenshot2](https://i.ibb.co/GPNnvtX/react-tree-2.png)
 
 ## Backend Server
 
