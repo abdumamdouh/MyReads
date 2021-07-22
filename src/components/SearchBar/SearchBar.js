@@ -26,7 +26,7 @@ class SearchBar extends Component {
             placeholder="Search by title or author"
             value={this.state.query}
             onChange={(e) => {
-              this.onChangeHandler(e.target.value.trim());
+              this.onChangeHandler(e.target.value);
             }}
           />
         </div>
