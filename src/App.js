@@ -4,6 +4,7 @@ import * as BooksAPI from "./api/BooksAPI";
 import "./App.css";
 import BookList from "./components/pages/BookList/BookList";
 import BookSearch from "./components/pages/BookSearch/BookSearch";
+import PageNotFound from "./components/pages/PageNotFound/PageNotFound";
 
 class BooksApp extends React.Component {
   state = {
@@ -90,6 +91,7 @@ class BooksApp extends React.Component {
             }}
           />
         </Route>
+        <Route component={PageNotFound} />
       </Switch>
     );
   }
