@@ -48,6 +48,10 @@ class BooksApp extends React.Component {
         this.setState(() => ({
           query: booksWithShelves,
         }));
+      } else {
+        this.setState(() => ({
+          query: [],
+        }));
       }
     });
   };
